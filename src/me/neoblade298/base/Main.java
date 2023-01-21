@@ -3,7 +3,7 @@ package me.neoblade298.base;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.neoblade298.neocore.commands.CommandManager;
+import me.neoblade298.neocore.bukkit.commands.CommandManager;
 
 public class Main extends JavaPlugin {
 	private static Main inst;
