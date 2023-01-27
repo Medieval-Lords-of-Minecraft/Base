@@ -3,7 +3,8 @@ package me.neoblade298.base;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.neoblade298.neocore.bukkit.commands.CommandManager;
+import me.neoblade298.neocore.bukkit.commands.SubcommandManager;
+import net.md_5.bungee.api.ChatColor;
 
 public class Main extends JavaPlugin {
 	private static Main inst;
@@ -22,7 +23,8 @@ public class Main extends JavaPlugin {
 	}
 	
 	private void initCommands() {
-		CommandManager mngr = new CommandManager("disenchant", this);
+		SubcommandManager mngr = new SubcommandManager("disenchant", "disenchant.use", ChatColor.RED, this);
+		// mngr.register(new CmdDisenchant("disenchant", "Disenchants the item", null, SubcommandRunner.PLAYER_ONLY));
 	}
 	
 	public static Main inst() {
